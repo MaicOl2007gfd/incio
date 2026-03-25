@@ -31,7 +31,7 @@ unset($_SESSION['errors'], $_SESSION['old'], $_SESSION['success']);
             <form action="validaciones.php" method="post" novalidate class="form-content">
                 <div class="form-group">
                     <label for="Nombre" class="form-label">Nombre de usuario</label>
-                    <input type="text" name="Nombre" id="Nombre" class="form-control" placeholder="Ingrese su nombre de usuario" value="<?php echo htmlspecialchars($old['Nombre'] ?? '', ENT_QUOTES); ?>">
+                    <input type="text" name="Nombre" id="Nombre" class="form-control" placeholder="Ingrese su nombre de usuario" value="<?php echo htmlspecialchars($old['Nombre'] ?? ''); ?>">
                     <?php if (isset($errors['Nombre'])): ?>
                         <div class="message-error"><?php echo htmlspecialchars($errors['Nombre'], ENT_QUOTES); ?></div>
                     <?php endif; ?>
@@ -39,7 +39,7 @@ unset($_SESSION['errors'], $_SESSION['old'], $_SESSION['success']);
 
                 <div class="form-group">
                     <label for="Email" class="form-label">Correo electrónico</label>
-                    <input type="email" name="Email" id="Email" class="form-control" placeholder="Ingrese su correo" value="<?php echo htmlspecialchars($old['Email'] ?? '', ENT_QUOTES); ?>">
+                    <input type="email" name="Email" id="Email" class="form-control" placeholder="Ingrese su correo" value="<?php echo htmlspecialchars($old['Email'] ?? ''); ?>">
                     <?php if (isset($errors['Email'])): ?>
                         <div class="message-error"><?php echo htmlspecialchars($errors['Email'], ENT_QUOTES); ?></div>
                     <?php endif; ?>
