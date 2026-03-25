@@ -19,7 +19,7 @@ unset($_SESSION['errors'], $_SESSION['old'], $_SESSION['success']);
 <body>
     <div class="login-container">
         <?php if ($success): ?>
-            <div class="message-success"><strong><?php echo htmlspecialchars($success, ENT_QUOTES, 'UTF-8'); ?></strong></div>
+            <div class="message-success"><strong><?php echo htmlspecialchars($success,  'UTF-8'); ?></strong></div>
         <?php endif; ?>
 
         <div class="login-card">
@@ -32,7 +32,7 @@ unset($_SESSION['errors'], $_SESSION['old'], $_SESSION['success']);
                     <label for="Nombre" class="form-label">Nombre de usuario</label>
                     <input type="text" name="Nombre" id="Nombre" class="form-control" placeholder="Ingrese su nombre de usuario" value="<?php echo htmlspecialchars($old['Nombre'] ?? ''); ?>">
                     <?php if (isset($errors['Nombre'])): ?>
-                        <div class="message-error"><?php echo htmlspecialchars($errors['Nombre'], ENT_QUOTES); ?></div>
+                        <div class="message-error"><?php echo htmlspecialchars($errors['Nombre']); ?></div>
                     <?php endif; ?>
                 </div>
 
@@ -40,7 +40,7 @@ unset($_SESSION['errors'], $_SESSION['old'], $_SESSION['success']);
                     <label for="Email" class="form-label">Correo electrónico</label>
                     <input type="email" name="Email" id="Email" class="form-control" placeholder="Ingrese su correo" value="<?php echo htmlspecialchars($old['Email'] ?? ''); ?>">
                     <?php if (isset($errors['Email'])): ?>
-                        <div class="message-error"><?php echo htmlspecialchars($errors['Email'], ENT_QUOTES); ?></div>
+                        <div class="message-error"><?php echo htmlspecialchars($errors['Email']); ?></div>
                     <?php endif; ?>
                 </div>
 
@@ -48,7 +48,7 @@ unset($_SESSION['errors'], $_SESSION['old'], $_SESSION['success']);
                     <label for="Contraseña1" class="form-label">Contraseña</label>
                     <input type="password" name="Contraseña1" id="Contraseña1" class="form-control" placeholder="Ingrese su contraseña">
                     <?php if (isset($errors['Contraseña1'])): ?>
-                        <div class="message-error"><?php echo htmlspecialchars($errors['Contraseña1'], ENT_QUOTES); ?></div>
+                        <div class="message-error"><?php echo htmlspecialchars($errors['Contraseña1']); ?></div>
                     <?php endif; ?>
                 </div>
 
@@ -56,7 +56,7 @@ unset($_SESSION['errors'], $_SESSION['old'], $_SESSION['success']);
                     <label for="Contraseña2" class="form-label">Confirmar contraseña</label>
                     <input type="password" name="Contraseña2" id="Contraseña2" class="form-control" placeholder="Confirme su contraseña">
                     <?php if (isset($errors['Contraseña2'])): ?>
-                        <div class="message-error"><?php echo htmlspecialchars($errors['Contraseña2'], ENT_QUOTES); ?></div>
+                        <div class="message-error"><?php echo htmlspecialchars($errors['Contraseña2']); ?></div>
                     <?php endif; ?>
                 </div>
 
