@@ -47,24 +47,4 @@ if (!empty($errors)) {
     exit;
 }
 
-// INSERT
-$sql = "INSERT INTO registro (Nombre, Email, Contraseña1) 
-        VALUES ('$nombre', '$email', '$passwordHash')";
-
-$result = $conn->query($sql);
-
-if ($result) {
-    $_SESSION['success'] = '¡Registro exitoso!';
-    header('Location: index.php');
-} else {
-    $_SESSION['errors']['general'] = 'Error al registrar: ' . $conn->error;
-    header('Location: index.php');
-}
-exit;
-
-if (mysqli_query($conexion, $sql)) {
-    echo "Usuario registrado correctamente";
-} else {
-    echo "Error: " . mysqli_error($conexion);
-}
 ?>
